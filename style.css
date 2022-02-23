@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+:root {
+	--color-background-1: #0e172f;
+	--color-background-2: #2aae41;
+	--color-background-3: #e3e3e3;
+	--color-foreground-1: #eaeaea;
+	--color-foreground-2: #030303;
+	--color-link: #217730;
+  --color-link-2: #c7c76e;
+	--border-radius-small: 12px;
+	--border-radius-medium: 25px;
+	--border-radius-large: 75px;
+	--spacing-half: 5px;
+	--spacing-1: 10px;
+	--spacing-2: 26px;
+	--spacing-3: 35px;
+	--spacing-4: 42px;
+	--spacing-5: 50px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, html {
+	background: var(--color-background-1) url("cactus-background.png") repeat 0 0;
+	color: var(--color-foreground-1);
+	font-family: 'Baloo 2', sans-serif;
+	font-size: 20px;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+h1 {
+	text-align: center;
+	font-size: calc(30px + 3vw);
+    font-weight: bold;
+    text-shadow:0 1px 0 hsl(174,5%,80%),
+                0 2px 0 hsl(174,5%,75%),
+                0 3px 0 hsl(174,5%,70%),
+                0 4px 0 hsl(174,5%,66%),
+                0 5px 0 hsl(174,5%,64%),
+                0 6px 0 hsl(174,5%,62%),
+                0 7px 0 hsl(174,5%,61%),
+                0 8px 0 hsl(174,5%,60%),
+                0 0 5px rgba(0,0,0,.05),
+                0 1px 3px rgba(0,0,0,.2),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.2),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.3);
+}
+
+
+h3 {
+	margin: var(--spacing-half) 0;
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 22px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header p {
+    padding: 10px 0;
+}
+
+p {
+	line-height: 25px;
+}
+
+ul {
+	margin-left: var(--spacing-4);
+}
+
+a {
+	color: var(--color-link);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header a, footer a{
+	color: var(--color-link-2);
+}
+
+.links {
+	line-break: anywhere;
+}
+
+header {
+	padding: 30px 50px;
+	padding-bottom: 60px; 
+	background-color: var(--color-background-2);
+	border-bottom-left-radius: var(--border-radius-medium);
+	border-bottom-right-radius: var(--border-radius-medium);
+	margin-bottom: var(--spacing-3);
+    background: linear-gradient(to right, #0A6636, #2AD948);
+}
+
+.cc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main div:nth-child(odd) {
+	background-color: var(--color-background-3);
+	color: var(--color-foreground-2);
+	width: 66%;
+	border: 3px solid var(--color-background-2);
+	border-left: none;
+	border-top-right-radius: var(--border-radius-large);
+	border-bottom-right-radius: var(--border-radius-large);
+	padding: calc(var(--border-radius-large) / 2);
+	margin-top: var(--spacing-3);
+	margin-bottom: var(--spacing-3);
+	opacity: 0.3;
+	margin-left: -66%;
+	transition: margin-left 1s ease, opacity 2s ease;
+}
+
+main div:nth-child(even) {
+	text-align: right;
+	background-color: var(--color-background-3);
+	color: var(--color-foreground-2);
+	width: 66%;
+	border: 3px solid var(--color-background-2);
+	border-right: none;
+	border-top-left-radius: var(--border-radius-large);
+	border-bottom-left-radius: var(--border-radius-large);
+	padding: calc(var(--border-radius-large) / 2);
+	opacity: 0.3;
+	margin-left: 134%;
+	margin-top: var(--spacing-3);
+	margin-bottom: var(--spacing-3);
+	transition: margin-left 1s ease, opacity 2s ease;
+}
+
+main div:nth-child(odd).show {
+	opacity: 1;
+	margin-left: 0;
+}
+
+main div:nth-child(even).show {
+	opacity: 1;
+	margin-left: 34%;
+}
+
+footer {
+	padding: calc(var(--border-radius-medium) / 2) 50px;
+	background-color: var(--color-background-2);
+	border-top-left-radius: var(--border-radius-medium);
+	border-top-right-radius: var(--border-radius-medium);
+	margin-top: var(--spacing-3);
+    background: linear-gradient(to right, #0A6636, #2AD948);
+}
+
+img {
+    height: 300px;
+	max-width: 100%;
+	display: block;
+	margin: 20px;
+	border-radius: var(--border-radius-small);
+	padding: var(--border-radius-small);
+	background-color: white;
+    transition: .2s;
+    box-shadow: 0 1px 0 hsl(174,5%,80%),
+                0 2px 0 hsl(174,5%,75%),
+                0 3px 0 hsl(174,5%,70%),
+                0 4px 0 hsl(174,5%,66%),
+                0 5px 0 hsl(174,5%,64%),
+                0 6px 0 hsl(174,5%,62%),
+                0 7px 0 hsl(174,5%,61%),
+                0 8px 0 hsl(174,5%,60%),
+                0 0 5px rgba(0,0,0,.05),
+                0 5px 10px rgba(0,0,0,.2),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.3);
+}
+
+@media only screen and (max-width: 480px) {
+	img {height: auto; width: 100% !important; margin: 17px; margin-top: 20px !important; margin-bottom: 20px !important;}
+	h1 {font-size: calc(24px + 2vw);}
+	a {white-space: normal;}
+	header {padding: 10px;}
+	footer {padding: 20px}
+	main > div {
+		padding: var(--spacing-1) !important;
+		width: 90% !important;
+	}
+	main div:nth-child(odd) {margin-left: -90%;}
+	main div:nth-child(even) {margin-left: 190%;}
+	main div:nth-child(even).show {margin-left: 10%;}
+}
+
+body::-webkit-scrollbar {
+	width: 15px;
+	background: inherit;
+}
+
+body::-webkit-scrollbar-track {
+	width: 15px;
+	background: #0e172f;
+}
+
+body::-webkit-scrollbar-thumb {
+	width: 15px;
+	background: rgb(37, 126, 126);
+}
+
+::selection {
+	background: rgb(165, 201, 191);
+}
+
+body::project {
+  margin: 35px;
+}
